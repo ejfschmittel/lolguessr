@@ -6,7 +6,7 @@
 const riotChache = {}
 
 
-const DRAGON_TAIL_VERSION = "/dragontail-9.3.1/9.3.1"
+const DRAGON_TAIL_VERSION = "/dragontail-11.10.1/11.10.1"
 
 const DATA_URL = process.env.PUBLIC_URL + DRAGON_TAIL_VERSION + "/data/en_US/"
 const IMAGE_URL = process.env.PUBLIC_URL + DRAGON_TAIL_VERSION + "/img"
@@ -72,6 +72,8 @@ export const getAllChampions = async () => {
     const champions = await getData(DATA_PATHS.CHAMPIONS);
     return Object.keys(champions.data).map(key => champions.data[key].id)
 }
+
+
 
 export const getRandomChampion = async () => {
     const allChampions = await getAllChampions()
