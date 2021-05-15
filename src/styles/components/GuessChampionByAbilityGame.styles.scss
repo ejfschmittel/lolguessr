@@ -1,0 +1,63 @@
+
+
+.icon{
+
+    background: var(--primary-color);
+    width: max-content;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    &--hero{
+        margin: 3rem auto;
+
+        & img{
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+}
+
+h2{
+    text-align: center;
+    margin-top: 2rem;
+}
+.buttons{
+  
+}
+
+
+input{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: .3rem 2rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+
+.hintText{
+    font-size: 1.6rem;
+    text-align: center;
+    display: block;
+    margin: 2rem auto;
+    height: 5rem;
+    max-width: 40rem;
+    
+}
+
+button{
+    padding: .3rem 2rem;
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-light);
+    margin: 0 auto;
+    margin-bottom: .5rem;
+    width: 100%;
+    display: block;
+    border: none; 
+    cursor: pointer;
+    max-width: 40rem;
+}
