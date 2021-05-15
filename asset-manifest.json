@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/lolguessr/static/css/main.614ea61c.chunk.css",
-    "main.js": "/lolguessr/static/js/main.fb079ac0.chunk.js",
-    "main.js.map": "/lolguessr/static/js/main.fb079ac0.chunk.js.map",
+    "main.js": "/lolguessr/static/js/main.df767119.chunk.js",
+    "main.js.map": "/lolguessr/static/js/main.df767119.chunk.js.map",
     "runtime-main.js": "/lolguessr/static/js/runtime-main.10aa669b.js",
     "runtime-main.js.map": "/lolguessr/static/js/runtime-main.10aa669b.js.map",
-    "static/js/2.3c4d5470.chunk.js": "/lolguessr/static/js/2.3c4d5470.chunk.js",
-    "static/js/2.3c4d5470.chunk.js.map": "/lolguessr/static/js/2.3c4d5470.chunk.js.map",
+    "static/js/2.8e2edbd0.chunk.js": "/lolguessr/static/js/2.8e2edbd0.chunk.js",
+    "static/js/2.8e2edbd0.chunk.js.map": "/lolguessr/static/js/2.8e2edbd0.chunk.js.map",
     "static/js/3.d671c3fc.chunk.js": "/lolguessr/static/js/3.d671c3fc.chunk.js",
     "static/js/3.d671c3fc.chunk.js.map": "/lolguessr/static/js/3.d671c3fc.chunk.js.map",
     "index.html": "/lolguessr/index.html",
     "static/css/main.614ea61c.chunk.css.map": "/lolguessr/static/css/main.614ea61c.chunk.css.map",
-    "static/js/2.3c4d5470.chunk.js.LICENSE.txt": "/lolguessr/static/js/2.3c4d5470.chunk.js.LICENSE.txt"
+    "static/js/2.8e2edbd0.chunk.js.LICENSE.txt": "/lolguessr/static/js/2.8e2edbd0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.10aa669b.js",
-    "static/js/2.3c4d5470.chunk.js",
+    "static/js/2.8e2edbd0.chunk.js",
     "static/css/main.614ea61c.chunk.css",
-    "static/js/main.fb079ac0.chunk.js"
+    "static/js/main.df767119.chunk.js"
   ]
 }
