@@ -85,12 +85,10 @@ export const getChampionData = async (championID) => {
 
 
 export const getRandomChampionAbillity = async () => {
-    const randomChampion = await getRandomChampion()
-    const championInfo = await getChampionData(randomChampion);
-    const data = championInfo.data[randomChampion]
-    const abilities = getChampionAbilityList(data)
+    const randomChampion = await getRandomChampionData()
+    const abilities = getChampionAbilityList(randomChampion)
     const randomAbility = getRandomArrayItem(abilities)
-    return {champion: championInfo, ability: randomAbility, championID: randomChampion}
+    return {champion: randomChampion, ability: randomAbility}
 }
 
 
@@ -121,7 +119,9 @@ export const getRandomChampionData = async () => {
 const getChampionAbilityList = (data) => {
     const keys = ["Q", "W", "E", "R", "Passive"]
     let abilities = [...data.spells, data.passive]
-    abilities.map((value, idx) => ({...value, key: keys[idx]}))
+    abilities = abilities.map((value, idx) => ({...value, key: keys[idx]}))
+    console.log("get abilities")
+    console.log(abilities)
     return abilities;
 }
 

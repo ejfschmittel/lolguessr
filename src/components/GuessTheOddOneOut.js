@@ -68,9 +68,9 @@ const GuessTheOddOneOut = () => {
 
 }
 
-const AbilityIcons = ({ability, showKey, showName}) => {
+const AbilityIcons = ({ability, showKey, showName, onClick}) => {
     return (
-        <div className="ability-icon">
+        <div className="ability-icon" >
             <div>
                 <LolIcon image={ability.image} />
             </div>
