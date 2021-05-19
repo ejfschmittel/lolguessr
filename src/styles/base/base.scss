@@ -14,6 +14,11 @@
 
     --box-shadow-hard: 0 .2rem .5rem rgba(0,0,0,.7);
     --box-shadow-light: 0 .2rem .5rem rgba(0,0,0,.5);
+
+    --box-shadow-highlight: 0 .3rem .7rem rgba(255,255,255,.3);
+
+    --color-correct: #24a346;
+    --color-incorrect: #9c0e21;
 }
 
 html, body, #root, .App{

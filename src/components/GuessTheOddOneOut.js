@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react'
 import ChampionsInput from "./ChampionInputBox"
 import LoLIcon from "./LolIcon"
 import {getRandomChampionAbillity, getImageUrl, getOddOneOutData} from "../utils/riot"
+import useHints from "../effects/useHints"
 import LolIcon from './LolIcon'
 
 import "../styles/components/OddOneOutGame.styles.scss";
@@ -17,9 +18,18 @@ import "../styles/components/OddOneOutGame.styles.scss";
 
 */
 
+
+
+/*
+
+    const {activeHints, revealNextHint, resetHints}
+*/
+
 const GuessTheOddOneOut = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [gameData, setGameData] = useState(null)
+
+    
 
     useEffect(() => {
         // load 
@@ -36,6 +46,29 @@ const GuessTheOddOneOut = () => {
         setIsLoading(false)
     }
 
+    const onGuess = (idx) => {
+       
+
+
+
+        const abilities = gameData.abilities
+        abilities[idx]["guessed"] = true;
+     
+
+        setGameData({
+            ...gameData,
+            abilities: abilities,
+        })
+      
+
+
+    }
+
+    const onNextClick = () => {
+        loadNew();
+    }
+
+    console.log(gameData)
 
     return (
         <div>
@@ -52,15 +85,15 @@ const GuessTheOddOneOut = () => {
 
 
                 <div className="abilities-display">
-                    {gameData?.abilities && gameData.abilities.map(ability => {
-                        return <AbilityIcons ability={ability} />
+                    {gameData?.abilities && gameData.abilities.map((ability, idx) => {
+                        return <AbilityIcons ability={ability} idx={idx}onClick={onGuess} />
                     })}
                 </div>
 
                 <div className="buttons">
                     <button >Hint</button>
                     <button >Solve</button>
-                    <button >Next</button>
+                    <button onClick={onNextClick}>Next</button>
                 </div>
             </div>
         </div>
@@ -68,14 +101,21 @@ const GuessTheOddOneOut = () => {
 
 }
 
-const AbilityIcons = ({ability, showKey, showName, onClick}) => {
+const AbilityIcons = ({ability, idx, onClick}) => {
+
+    let className = `ability-icon
+        ${ability.odd ? "ability-icon--correct" : "ability-icon--incorrect"}
+        ${!ability.guessed && "ability-icon--force-bg"}`;
+
+
     return (
-        <div className="ability-icon" >
-            <div>
+        <div className={className} onClick={() => onClick(idx)}>
+             <div className="ability-icon__key">{ability.key}</div>
+            <div className="ability-icon__img">
                 <LolIcon image={ability.image} />
             </div>
-            <div>{ability.key}</div>
-            <div>{ability.name}</div>
+           
+            <div  className="ability-icon__name">{ability.name}</div>
         </div>
     )
 }

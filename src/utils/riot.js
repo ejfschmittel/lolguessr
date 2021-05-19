@@ -15,6 +15,7 @@ const IMAGE_URL = process.env.PUBLIC_URL + DRAGON_TAIL_VERSION + "/img"
 
 export const DATA_PATHS = {
     CHAMPIONS: "champion.json",
+    ITEMS: "item.json"
 }
 
 
@@ -73,6 +74,11 @@ export const getAllChampions = async () => {
     return Object.keys(champions.data).map(key => champions.data[key].id)
 }
 
+export const getAllChampionNames = async () => {
+    const champions = await getData(DATA_PATHS.CHAMPIONS);
+    return Object.keys(champions.data).map(key => champions.data[key].name)
+}
+
 
 
 export const getRandomChampion = async () => {
@@ -129,7 +135,7 @@ const getChampionAbilityList = (data) => {
 
 const getRandomInt = (num) => Math.floor(Math.random() * num)
 
-const getRandomArrayItem = (array) => array[Math.floor(Math.random() * array.length)]  
+export const getRandomArrayItem = (array) => array[Math.floor(Math.random() * array.length)]  
 
 export const getSpellIconPath = (abilityName) => {
     return `${IMAGE_URL}/spell/${abilityName}.png`;
@@ -140,6 +146,10 @@ export const getImageUrl = (image) => {
     return `${IMAGE_URL}/${image.group}/${image.full}`;
 }
 
-export const getPassiveIconPath = (champion) => {
 
+
+export const getAllItems = async () => {
+    const items = await getData(DATA_PATHS.ITEMS)
+    const itemsArray = Object.keys(items.data).map((key) => ({...items.data[key], key}))
+    return itemsArray;
 }

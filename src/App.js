@@ -4,7 +4,8 @@ import HeaderBar from "./components/HeaderBar"
 import GameMenu, {GAMES} from "./components/GameMenu"
 import GuessChampionByAbilityNameGame from "./components/GuessChampionByAbilityGame"
 import GuessTheOddOneOut from "./components/GuessTheOddOneOut"
-import {getData, DATA_PATHS, getChampionData, getRandomChampion, getRandomChampionAbillity} from "./utils/riot"
+import HigherOrLowerItemGame from "./components/HigherLowerItemsGame"
+import {getData, DATA_PATHS, getChampionData, getRandomChampion, getRandomChampionAbillity, getAllItems} from "./utils/riot"
 
 import "./styles/main.scss"
 
@@ -31,9 +32,12 @@ function App() {
 
   const Container = useMemo(() => {
     console.log(game)
-    console.log(GAMES.GUESS_CHAMPION_BY_ABILITY)
+    
     switch(game){
 
+      case GAMES.HIGHER_OR_LOWER.key:
+        console.log("hello")
+        return <HigherOrLowerItemGame />
       case GAMES.GUESS_CHAMPION_BY_ABILITY.key:
         return <GuessChampionByAbilityNameGame />
       case GAMES.GUESS_THE_ODD_ONE_OUT.key:

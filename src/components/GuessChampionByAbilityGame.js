@@ -78,7 +78,7 @@ const GuessChampionByAbilityNameGame = () => {
         const solvedAdd = activeHints.solvedByUser ? "Correct: " : "";
         const abilityKeyHint = activeHints.abilityKey || activeHints.solved ? data.ability["key"] : "";
         const abilityNameHint = activeHints.abilityName || activeHints.solved ? `, called "${data.ability["name"]}",` : "";
-        const endPart = activeHints.solved ? data.champion.id : activeHints.championFirstLetter ? `${data.champion.id.charAt(0)}...` : "which Champion?"
+        const endPart = activeHints.solved ? data.champion.name : activeHints.championFirstLetter ? `${data.champion.name.charAt(0)}...` : "which Champion?"
         return `${solvedAdd} This ability${abilityNameHint} is the ${abilityKeyHint} ability of ${endPart}`;
     }
 
@@ -124,9 +124,9 @@ const GuessChampionByAbilityNameGame = () => {
     const onChange = (e) => {
         const {value} = e.target;
         setText(value)
-        if(value.toLowerCase() == data.champion.id.toLowerCase()){
+        if(value.toLowerCase() == data.champion.name.toLowerCase()){
             const abilityKeyHint = data.ability["key"]
-            const text = `Correct: This ability is the ${abilityKeyHint} ability of ${data.champion.id}.`;
+            const text = `Correct: This ability is the ${abilityKeyHint} ability of ${data.champion.name}.`;
             setHintText(text)
         }
     }

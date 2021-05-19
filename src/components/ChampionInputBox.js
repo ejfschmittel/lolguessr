@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {getAllChampions} from "../utils/riot"
+import {getAllChampionNames} from "../utils/riot"
 
 
 
@@ -10,7 +10,7 @@ const ChampionInput = ({ id, list, ...props}) => {
     useEffect(() => {loadChampionsList();},[])
 
     const loadChampionsList = async () => {
-        const champions = await getAllChampions();
+        const champions = await getAllChampionNames();
         setChampionsList(champions)
     }
 

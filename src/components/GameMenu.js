@@ -8,9 +8,9 @@ export const GAMES = {
         title: "Guess the Champion By Ability",
         image: "",
     },
-    GUESS_ABILITY_NAME: {
-        key: "ability_name",
-        title: "Guess the Ability Name",
+    HIGHER_OR_LOWER: {
+        key: "higher or lower",
+        title: "Higher or lower item price",
         image: "",
     },
     GUESS_THE_ODD_ONE_OUT: {
