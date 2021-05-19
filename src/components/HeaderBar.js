@@ -1,11 +1,11 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 import "../styles/components/HeaderBar.styles.scss"
 
 const HeaderBar = ({onBackToMenu}) => {
     return ( 
         <header className="header-bar">
-            <div onClick={onBackToMenu} className="header-bar__menu-btn">Menu</div>
+            <Link onClick={onBackToMenu} className="header-bar__menu-btn" to="/">Menu</Link>
             <h1 className="header-bar__title">
                 League of Legends Quizzes
             </h1>

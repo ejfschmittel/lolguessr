@@ -22,7 +22,8 @@
 
     &__menu-btn{
         cursor: pointer;
-
+        color: var(--text-color);
+        text-decoration: none;
         &:hover{
           
         }

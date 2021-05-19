@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 import "../styles/components/GameMenu.styles.scss"
 
 export const GAMES = {
@@ -7,36 +7,39 @@ export const GAMES = {
         key: "champion_by_ability",
         title: "Guess the Champion By Ability",
         image: "",
+        path: "guess-champion-by-ability"
     },
     HIGHER_OR_LOWER: {
         key: "higher or lower",
         title: "Higher or lower item price",
         image: "",
+        path: "higher-or-lower"
     },
     GUESS_THE_ODD_ONE_OUT: {
         key: "odd_one_out",
         title: "Guess the odd one out",
         image: "",
+        path: "odd-one-out"
     }
 }
 
 
-const GameMenu = ({onGameSelect}) => {
+const GameMenu = () => {
     return (
         <div className="game-menu">
             {Object.keys(GAMES).map((key) => {
-                return <GameMenuTile game={GAMES[key]} onClick={onGameSelect} gameKey={key} key={key}/>
+                return <GameMenuTile game={GAMES[key]} gameKey={key} key={key}/>
             })}
         </div>
     )
 }
 
-const GameMenuTile = ({game, onClick}) => {
+const GameMenuTile = ({game}) => {
     return (
-        <div className="menu-tile" onClick={() => onClick(game.key)}>
+        <Link className="menu-tile" to={game.path} >
             <img src="" className="menu-tile__image" />
             <div className="menu-tile__title">{game.title}</div>
-        </div>
+        </Link>
     )
 }
 
