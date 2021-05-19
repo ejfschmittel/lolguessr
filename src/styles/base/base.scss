@@ -8,6 +8,11 @@
     --main-background: #231e4a;
     --font-color: #fff;
 
+
+    --content-width-max: 40rem;
+    --content-width-md: 30rem;
+  
+
     --primary-color: #130d40;
     --primary-color-light: #8178bf;
 
@@ -62,5 +67,24 @@ div{
     padding: 1rem 2rem;
     min-height: 5rem;
     margin-top: 2rem;
+}
+
+
+.button{
+    cursor: pointer;
+
+    &--default{
+        padding: .3rem 2rem;
+        font-size: 1.6rem;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        box-shadow: var(--box-shadow-light);
+        margin: 0 auto;
+        margin-bottom: .5rem;
+        width: 100%;
+        display: block;
+        border: none; 
+        max-width: var(--content-width-max);
+    }
 }
 

@@ -46,18 +46,3 @@ input{
     max-width: 40rem;
     
 }
-
-button{
-    padding: .3rem 2rem;
-    font-size: 1.6rem;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    box-shadow: var(--box-shadow-light);
-    margin: 0 auto;
-    margin-bottom: .5rem;
-    width: 100%;
-    display: block;
-    border: none; 
-    cursor: pointer;
-    max-width: 40rem;
-}

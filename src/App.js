@@ -4,9 +4,11 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 import HeaderBar from "./components/HeaderBar"
 import GameMenu, {GAMES} from "./components/GameMenu"
-import GuessChampionByAbility from "./components/GuessChampionByAbilityGame"
-import GuessTheOddOneOut from "./components/GuessTheOddOneOut"
-import HigherOrLower from "./components/HigherLowerItemsGame"
+
+
+import GuessChampionByAbility from "./pages/GuessChampionByAbility.page"
+import GuessTheOddOneOut from "./pages/GuessOddAbility.page"
+import HigherOrLower from "./pages/HigherOrLower.page"
 
 import Disclaimer from "./components/DisclaimerBar"
 
