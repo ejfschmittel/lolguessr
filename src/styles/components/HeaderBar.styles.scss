@@ -9,14 +9,22 @@
     box-shadow: var(--box-shadow-hard);
 
     &__title{
-
+        font-size: 2.3rem;
+        letter-spacing: .1rem;
+       
     }
 
     &__back-btn{
 
     }
 
-    &__menu-btn{
 
+
+    &__menu-btn{
+        cursor: pointer;
+
+        &:hover{
+          
+        }
     }
 }

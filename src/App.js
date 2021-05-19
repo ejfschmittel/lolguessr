@@ -6,6 +6,7 @@ import GuessChampionByAbilityNameGame from "./components/GuessChampionByAbilityG
 import GuessTheOddOneOut from "./components/GuessTheOddOneOut"
 import HigherOrLowerItemGame from "./components/HigherLowerItemsGame"
 import {getData, DATA_PATHS, getChampionData, getRandomChampion, getRandomChampionAbillity, getAllItems} from "./utils/riot"
+import Disclaimer from "./components/DisclaimerBar"
 
 import "./styles/main.scss"
 
@@ -58,6 +59,7 @@ function App() {
         </div>
         
       </div>
+      <Disclaimer />
     </div>
   );
 }

@@ -5,9 +5,11 @@ import "../styles/components/HeaderBar.styles.scss"
 const HeaderBar = ({onBackToMenu}) => {
     return ( 
         <header className="header-bar">
-            <div onClick={onBackToMenu}>Menu</div>
-            <h1 className="header-bar__title">Title</h1>
-            <div>Settings</div>
+            <div onClick={onBackToMenu} className="header-bar__menu-btn">Menu</div>
+            <h1 className="header-bar__title">
+                League of Legends Quizzes
+            </h1>
+            <div className="header-bar__menu-btn">Settings</div>
         </header>
     )
 }
