@@ -1,14 +1,25 @@
 .higher-or-lower{
     width: 100%;
-    display: flex;
-
-    min-height: 200px;
+ 
+ 
+    height: 200px;
     margin: 2rem auto;
     width: 100%;
-    background: red;
+
     position: relative;
     max-width: 40rem;
+    overflow: hidden;
     
+    &__result{
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+        height: 2.6rem;
+    
+        width: var(--content-width-max);
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
 
     &__vs{
         position: absolute;
@@ -18,43 +29,47 @@
         height: 5rem;
         width: 5rem;
         border-radius: 50%;
-        background: #aaa;
+        background: rgba(200,200,200, .8);
         border: 1px solid #fff;
         display: flex;
         justify-content: center;
         align-items: center;
         font-weight: bold;
+        z-index: 2;
 
     }
 
-    &__half-left{
-        flex: 1;
-        padding: 1rem;
-        background: black;
-    }
-
-    &__half-right{
-        flex: 1;
-        padding: 1rem;
-        border-left: 1px solid #fff;
+    &__slider{
+        height: 100%;
+        width: 60rem;
+        display: flex;
+        overflow: hidden;
 
     }
+
 }
 
 .item-display{
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 20rem;
+
 
     align-items: center;
     height: 100%;
     justify-content: center;
+ 
+   
 
     &__img{
         width: 5rem;
         height: 5rem;
-        
+        background: #000;
       
     }
+
+    
 
     &__title{
         
@@ -62,5 +77,10 @@
         margin-bottom: 2rem;
         font-size: 1.4rem;
      
+    }
+
+    &__price{
+        height: 2rem;
+        color: var(--text-color)
     }
 }

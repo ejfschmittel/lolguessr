@@ -14,6 +14,8 @@
   
 
     --primary-color: #130d40;
+    --primary-color-highlight: #1d1657;
+
     --primary-color-light: #8178bf;
 
 
@@ -85,6 +87,38 @@ div{
         display: block;
         border: none; 
         max-width: var(--content-width-max);
+        transition: all .3s;
+        position: relative;
+
+        &:hover{
+            background-color: var(--primary-color-highlight);
+        }
+
+
+       
+    }
+
+    
+
+    &:hover svg{
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    svg{
+        transform-origin: center center;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%); 
+        font-size: 2.6rem;  
+        transition: all .3s; 
+    }
+
+    &--smaller-icon{
+        svg{
+            font-size: 1.8rem;
+            left: 1.4rem
+        }
     }
 }
 

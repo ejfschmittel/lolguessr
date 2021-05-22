@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Select from "react-dropdown-select";
 import {getAllChampionNames} from "../utils/riot"
 
 
@@ -16,6 +17,7 @@ const ChampionInput = ({ id, list, ...props}) => {
 
     return (
         <React.Fragment>
+         
             <input list={list} id={id} {...props}/>
             <datalist id={list}>
                 {championsList.map(championID => {
